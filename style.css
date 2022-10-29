@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: lightgray;
+}
+
+.faq-container {
+  max-width: 600px;
+  min-width: 600px;
+}
+
+.faq {
+  background-color: #e7e7e7;
+  border: 1px solid darkslateblue;
+  border-radius: 5px;
+  padding: 20px 20px;
+  margin: 20px 0 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+
+  transition: 0.3s ease;
+}
+
+.faq.active::before {
+  content: "\f075";
+  position: absolute;
+  font-size: 9rem;
+  font-family: "Font Awesome 5 Free";
+  z-index: 0;
+  opacity: 0.1;
+  top: 0px;
+  left: -10px;
+  transform: rotateY(180deg);
+
+  color: darkslategrey;
+}
+.faq.active::after {
+  content: "\f075";
+  position: absolute;
+  font-size: 10rem;
+  font-family: "Font Awesome 5 Free";
+  z-index: 0;
+  opacity: 0.1;
+  top: 25px;
+  left: 140px;
+
+  color: darkslateblue;
+}
+
+.faq-text {
+  margin: 10px 0 20px 10px;
+  display: none;
+}
+
+.faq.active .faq-text {
+  display: inline-block;
+}
+
+.active .fa-chevron-down {
+  display: none;
+}
+
+.active .fa-xmark {
+  display: inline-block;
+}
+
+.fa-xmark {
+  display: none;
+}
+.fa-chevron-down {
+  display: inline-block;
+}
+
+.faq-btn {
+  font-size: 2rem;
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  top: 30px;
+  right: 030px;
+}
+
+i {
+  position: absolute;
+  text-align: center;
+}
