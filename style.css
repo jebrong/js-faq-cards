@@ -34,6 +34,10 @@ body {
   transition: 0.3s ease;
 }
 
+.faq.active {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
 .faq.active::before {
   content: "\f075";
   position: absolute;
